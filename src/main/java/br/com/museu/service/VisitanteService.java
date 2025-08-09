@@ -20,4 +20,8 @@ public class VisitanteService {
     public List<Visitante> listarTodos() {
         return repository.findAll();
     }
+
+    public Visitante findById(Long id) {
+        return repository.findById(id).orElseThrow();
+    }
 }
